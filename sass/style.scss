@@ -1,0 +1,384 @@
+@import 'colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	position: relative;
+	background-color: $bg-color;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto 40px;
+	width: 60px;
+	height: 4px;
+	background-color: $main-color;
+}
+
+.blue-text {
+	color: $main-color;
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav {
+	text-transform: uppercase;
+	z-index: 1;
+	transition: background-color 0.6s;
+	.navbar-brand,
+	.nav-link {
+		color: $white;
+	}
+	.nav-link:hover {
+		color: $main-color;
+	}
+	.navbar-brand:hover {
+		color: $main-color;
+	}
+	.navbar-brand {
+		font-weight: bold;
+	}
+
+	.fa-bars {
+		padding: 10px;
+		color: $white;
+	}
+
+	.active {
+		color: $main-color !important;
+	}
+}
+
+header {
+	position: relative;
+	color: $white;
+	h1 {
+		text-transform: uppercase;
+		font-size: 30px;
+	}
+	p {
+		font-size: 14px;
+	}
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url('../img/header_img_small.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		z-index: 0;
+	}
+
+	.hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -10;
+	}
+
+	.hero-text {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+		text-align: center;
+		z-index: 5;
+	}
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+
+	.fa-chevron-down {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 30px;
+		color: $white;
+		transition: 1s;
+		animation: chevron-anim 0.4s infinite alternate;
+	}
+}
+
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+
+	.aboutus-hover {
+		transition: color 0.3s;
+	}
+
+	.aboutus-hover:hover {
+		color: $main-color;
+	}
+}
+
+.aboutus-hero {
+	position: relative;
+	background-image: url(../img/technology_small.jpg);
+	background-position: center;
+	background-size: cover;
+	color: #ddd;
+	z-index: 0;
+
+	.aboutus-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -5;
+	}
+
+	i {
+		font-size: 36px;
+	}
+}
+
+.portfolio {
+	.carousel-item {
+		position: relative;
+		// height: 600px;
+	}
+	.carousel-caption {
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding: 40px 0;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+}
+
+.prices {
+	.my-own-card {
+		background-color: $white;
+		margin: 10px;
+		padding: 20px;
+		border-radius: 5px;
+		box-shadow: 5px 5px 10px gray;
+		transition: transform 0.3s;
+	}
+
+	.my-own-card:hover {
+		transform: scale(1.02);
+	}
+
+	h3 {
+		text-transform: uppercase;
+		color: $main-color;
+	}
+	span {
+		font-weight: bold;
+	}
+
+	i {
+		padding: 0 5px;
+	}
+
+	button {
+		padding: 10px 20px;
+		text-transform: uppercase;
+	}
+
+	.price-tag {
+		font-size: 24px;
+		font-weight: bold;
+	}
+	.price-info {
+		margin-top: 20px;
+		text-align: center;
+		a {
+			text-decoration: none;
+		}
+	}
+	.text-muted {
+		text-align: center;
+	}
+}
+
+.team {
+	.hero-img-team {
+		position: relative;
+		background-image: url('../img/team/chairs-g27cc3aa61_1920.jpg');
+		background-position: center;
+		background-attachment: fixed;
+		background-size: cover;
+		z-index: 0;
+	}
+	.hero-shadow-team {
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.8);
+		width: 100%;
+		height: 100%;
+		z-index: -10;
+	}
+
+	h2 {
+		color: white;
+		padding-top: 20px;
+	}
+	position: relative;
+	.card {
+		margin: 20px;
+		transition: transform 0.3s;
+		img {
+			height: 300px;
+			object-fit: cover;
+		}
+		.card-title {
+			margin-bottom: 20px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		.card-footer {
+			display: flex;
+			justify-content: space-around;
+			color: $main-color;
+		}
+
+		i {
+			padding: 10px;
+		}
+	}
+	.card:hover {
+		transform: scale(0.95);
+	}
+}
+
+.achievements {
+	.icon {
+		color: white;
+		font-size: 30px;
+		text-shadow: 0 0 5px black;
+	}
+}
+
+.contact {
+	position: relative;
+	background-image: url('../img/dodge-charger-ga2d784188_1280.jpg');
+	background-size: cover;
+	// background-position: bottom;
+	// background-attachment: fixed;
+	z-index: 0;
+	h2 {
+		color: white;
+	}
+	h3 {
+		text-transform: uppercase;
+	}
+	.underline {
+		background-color: white;
+	}
+	.contact-item {
+		color: white;
+	}
+	.contact-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -10;
+	}
+	i {
+		font-size: 26px;
+		color: white;
+		padding: 0 10px;;
+	}
+}
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 36px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.portfolio {
+		.card {
+			margin-right: 10px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 42px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 72px;
+	}
+	.aboutus-hero {
+		background-image: url('../img/technology_big.jpg');
+	}
+	.prices {
+		.price-info {
+			font-size: 18px;
+		}
+		.text-muted {
+			font-size: 18px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url('../img/header_img_big.jpg');
+		}
+	}
+}
+
+@keyframes chevron-anim {
+	from {
+		bottom: 20px;
+	}
+	to {
+		bottom: 30px;
+	}
+}
